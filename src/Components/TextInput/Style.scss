@@ -1,0 +1,29 @@
+.TextInput-root {
+  box-sizing: border-box;
+
+  .small input {
+    height: 20px;
+  }
+  .normalSize input {
+    height: 25px;
+  }
+  .large input {
+    height: 40px;
+  }
+
+  .auto input {
+    width: auto;
+  }
+  .short input {
+    width: 120px;
+  }
+  .normalLength input {
+    width: 250px;
+  }
+  .long input {
+    width: 550px;
+  }
+  .fill input {
+    width: 100%;
+  }
+}
