@@ -67,9 +67,21 @@ export interface ITextInputProps {
    * Note: will override labelValue
    */
   onLabelRender?: any;
+
+  /**
+   * Expose the onChange API
+   */
+  onChange?: (value: string) => void;
 }
 
 export interface ITextInputState {
+  /**
+   * refures to the state in which the label will either be up or down
+   */
   isActive: boolean;
   mode: "standard" | "error" | "warning";
+  /**
+   * <input> value is tracked internally
+   */
+  internalValue: string;
 }
