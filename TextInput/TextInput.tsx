@@ -9,16 +9,38 @@ export class TextInput extends React.Component<
   constructor(props: ITextInputProps) {
     super(props);
 
-    this.state = {};
+    let isActive = !!this.props.value;
+
+    this.state = {
+      isActive: isActive,
+      mode: "standard"
+    };
   }
 
+  private changeActiveState = (value: boolean) => {
+    this.setState({ isActive: value });
+  };
+
   public render() {
-    const { type, labelValue, onLabelRender, length, size } = this.props;
+    const { isActive, mode } = this.state;
+    const { type, labelValue, onLabelRender, value } = this.props;
     return (
       <div className="TextInput-root">
-        <label className={`${length} ${size}`}>
-          {onLabelRender ? onLabelRender : labelValue}
-          <input type={type} />
+        <label className="label-container">
+          <span
+            className={`label-text ${
+              isActive ? "label-text-active" : "label-text-inactive"
+            }`}
+          >
+            {onLabelRender ? onLabelRender : labelValue}
+          </span>
+          <input
+            onFocus={() => this.changeActiveState(true)}
+            onBlur={() => this.changeActiveState(false)}
+            className={`input ${mode}-outline`}
+            type={type}
+            value={value}
+          />
         </label>
       </div>
     );

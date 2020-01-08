@@ -18,16 +18,6 @@ export interface ITextInputProps {
   disabled?: boolean;
 
   /**
-   *	Specifies the size of the input field
-   */
-  size?: "small" | "normalSize" | "large";
-
-  /**
-   *	Specifies the length of the input field
-   */
-  length?: "auto" | "short" | "long" | "fill" | "normalLength";
-
-  /**
    *	Specifies the maximum allowed length for the input field
    */
   maxLength?: number;
@@ -79,4 +69,7 @@ export interface ITextInputProps {
   onLabelRender?: any;
 }
 
-export interface ITextInputState {}
+export interface ITextInputState {
+  isActive: boolean;
+  mode: "standard" | "error" | "warning";
+}

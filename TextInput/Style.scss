@@ -1,29 +1,64 @@
+@mixin variable-styles {
+  /**
+	*	Variable styles refer to styles that will be added or removed programmatically
+	*/
+  .label-container {
+    .label-text-active {
+      font-weight: lighter;
+      color: rgb(104, 104, 104);
+      transform: translate(12px, -0.5em) scale(0.9);
+    }
+
+    .label-text-inactive {
+      transform: translate(10px, 0.5rem);
+    }
+
+    .standard-outline:focus {
+      border: solid rgb(21, 255, 0) 1px;
+		}
+		
+    .error-outline:focus {
+      border: solid rgb(255, 0, 0) 1px;
+		}
+		
+    .warning-outline:focus {
+      border: solid rgb(255, 251, 0) 1px;
+    }
+  }
+}
+
 .TextInput-root {
+  @include variable-styles;
   box-sizing: border-box;
+  font-size: 1rem;
 
-  .small input {
-    height: 20px;
-  }
-  .normalSize input {
-    height: 25px;
-  }
-  .large input {
-    height: 40px;
-  }
+  .label-container {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: 35px;
+    max-width: 250px;
+    padding: 10px;
 
-  .auto input {
-    width: auto;
-  }
-  .short input {
-    width: 120px;
-  }
-  .normalLength input {
-    width: 250px;
-  }
-  .long input {
-    width: 550px;
-  }
-  .fill input {
-    width: 100%;
+    .label-text {
+      box-sizing: border-box;
+      transition: all ease 0.2s;
+      font-size: 1rem;
+      background-color: white;
+      padding: 0px 5px;
+      position: absolute;
+      cursor: text;
+    }
+
+    .input {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
