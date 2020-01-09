@@ -13,10 +13,14 @@ export class TextInput extends React.Component<
      * Sets the inital position of the label
      */
     let isActive = !!this.props.value;
+    let mode: any = "standard";
+
+    if (this.props.error) mode = "error";
+    if (this.props.warning) mode = "warning";
 
     this.state = {
       isActive: isActive,
-      mode: "standard",
+      mode: mode,
       internalValue: this.props.value || ""
     };
   }

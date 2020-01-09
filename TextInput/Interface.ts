@@ -69,6 +69,18 @@ export interface ITextInputProps {
   onLabelRender?: any;
 
   /**
+   * Provide an error message
+   * Note: Will change color of <input>
+   */
+  error?: string;
+
+  /**
+   * Provide an warning message
+   * Note: Will change color of <input>
+   */
+  warning?: string;
+
+  /**
    * Expose the onChange API
    */
   onChange?: (value: string) => void;

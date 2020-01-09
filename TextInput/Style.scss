@@ -14,15 +14,21 @@
     }
 
     .standard-outline:focus {
-      border: solid rgb(21, 255, 0) 1px;
-		}
-		
+      $standard_outline_color: #4682b4; // Steel Blue
+      border: solid $standard_outline_color 1px;
+      box-shadow: 0px 0px 1px 1px $standard_outline_color;
+    }
+
     .error-outline:focus {
-      border: solid rgb(255, 0, 0) 1px;
-		}
-		
+      $error_outline_color: #ca3433; // Persian Red
+      border: solid $error_outline_color 1px;
+      box-shadow: 0px 0px 1px 1px $error_outline_color;
+    }
+
     .warning-outline:focus {
-      border: solid rgb(255, 251, 0) 1px;
+      $warning_outline_color: #fedc56; // Mustard Yellow
+      border: solid $warning_outline_color 1px;
+      box-shadow: 0px 0px 1px 1px $warning_outline_color;
     }
   }
 }
