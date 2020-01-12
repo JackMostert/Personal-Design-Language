@@ -45,13 +45,20 @@ export class TextInput extends React.Component<
 
   public render() {
     const { isActive, mode } = this.state;
-    const { type, labelValue, onLabelRender, value } = this.props;
+    const {
+      type,
+      labelValue,
+      onLabelRender,
+      value,
+      className,
+      style
+    } = this.props;
 
     const labelStyle = isActive ? "label-text-active" : "label-text-inactive";
     const labelText = onLabelRender ? onLabelRender : labelValue;
 
     return (
-      <div className="TextInput-root">
+      <div className={`TextInput-root ${className || ""}`} style={style}>
         <label className="label-container">
           <span className={`label-text ${labelStyle}`}>{labelText}</span>
           <input

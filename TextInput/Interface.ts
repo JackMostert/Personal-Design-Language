@@ -84,6 +84,16 @@ export interface ITextInputProps {
    * Expose the onChange API
    */
   onChange?: (value: string) => void;
+
+  /**
+   *	Add your own css class
+   */
+  className?: string;
+
+  /**
+   *	Add your own css inline styles
+   */
+  style?: React.CSSProperties;
 }
 
 export interface ITextInputState {

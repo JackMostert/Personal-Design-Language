@@ -1,0 +1,75 @@
+@import "../styles/_variables";
+
+.Card-root {
+  @include RegularFont;
+
+  display: inline-block;
+  @for $i from 1 through 5 {
+    .shadow-v#{$i} {
+      width: inherit;
+      height: inherit;
+      box-sizing: border-box;
+      box-shadow: 0px 0px $i * $i * 1px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .CardContent-root {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .CardImage-root {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity ease-in-out 0.1s;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-sizing: border-box;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .small {
+      width: 250px;
+      height: 150px;
+    }
+
+    .normal {
+      width: 350px;
+      height: 250px;
+    }
+
+    .large {
+      width: 450px;
+      height: 350px;
+    }
+
+    .xlarge {
+      width: 550px;
+      height: 450px;
+    }
+
+    .fill {
+      width: 100%;
+    }
+
+    .auto {
+      width: auto;
+    }
+  }
+}

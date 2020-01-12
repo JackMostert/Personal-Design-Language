@@ -1,3 +1,5 @@
+@import "../styles/_variables";
+
 @mixin variable-styles {
   /**
 	*	Variable styles refer to styles that will be added or removed programmatically
@@ -35,8 +37,8 @@
 
 .TextInput-root {
   @include variable-styles;
+  @include RegularFont;
   box-sizing: border-box;
-  font-size: 1rem;
 
   .label-container {
     display: flex;
@@ -49,7 +51,7 @@
     .label-text {
       box-sizing: border-box;
       transition: all ease 0.2s;
-      font-size: 1rem;
+      font-size: 0.9rem;
       background-color: white;
       padding: 0px 5px;
       position: absolute;
