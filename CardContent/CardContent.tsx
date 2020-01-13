@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ICardContentProps, ICardContentState } from "./Interface";
+import "./Style.scss";
 
 export class CardContent extends React.Component<
   ICardContentProps,
