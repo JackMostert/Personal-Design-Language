@@ -17,7 +17,7 @@
   transition: all ease-in-out 0.1s;
   text-decoration: none;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
     cursor: pointer;
     background-color: darken($color: #8385bd, $amount: 10);
   }
