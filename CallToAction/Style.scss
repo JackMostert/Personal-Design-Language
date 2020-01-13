@@ -9,15 +9,15 @@
   background-color: #8385bd;
   color: white;
   min-width: 200px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   border-radius: 5px;
   border: none;
-  box-shadow: 1px 1px 5px 1px rgb(54, 54, 54);
+  box-shadow: 1px 1px 5px 1px #0000004d;
   transition: all ease-in-out 0.1s;
   text-decoration: none;
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.5);
     cursor: pointer;
     background-color: darken($color: #8385bd, $amount: 10);
   }
