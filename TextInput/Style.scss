@@ -38,13 +38,12 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
     height: 20px + $i * 5.25px;
     .label-container {
       height: inherit;
-      padding: 7px;
 
       .label-text {
         position: absolute;
         top: 0px;
         bottom: 0px;
-        left: 20px;
+        left: 15px;
         display: flex;
         transition: all ease 0.2s;
         font-size: 0.9rem;
@@ -52,11 +51,12 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
       }
 
       .label-text-active {
+        padding: 7px 5px;
+        top: -7px;
         font-weight: lighter;
         color: rgb(104, 104, 104);
         bottom: 25px + $i * 5.25px;
         background: white;
-        padding: 0 5px;
       }
     }
 
@@ -69,6 +69,7 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
 .TextInput-root {
   @include variable-styles;
   @include RegularFont;
+  padding: 10px;
 
   .label-container {
     display: flex;
