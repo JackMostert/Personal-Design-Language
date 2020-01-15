@@ -53,9 +53,26 @@ export interface ITextInputProps {
   required?: boolean;
 
   /**
+   *	specifies the inital value for the component
+   */
+  defaultValue?: string;
+
+  /**
    *	specifies the type of text input
    */
   type: "text" | "password" | "email" | "hidden" | "url";
+
+  /**
+   * specifies the size of text input
+   * 1 being the smallest and 5 being the largest
+   */
+  size: 1 | 2 | 3 | 4 | 5;
+
+  /**
+   * specifies the borderRadius of text input
+   * 1 being the smallest and 5 being the largest
+   */
+  borderRadius?: 1 | 2 | 3 | 4 | 5;
 
   /**
    * Specifies the label text

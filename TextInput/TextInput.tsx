@@ -12,7 +12,7 @@ export class TextInput extends React.Component<
     /**
      * Sets the inital position of the label
      */
-    let isActive = !!this.props.value;
+    let isActive = !!this.props.value || !!this.props.defaultValue;
     let mode: any = "standard";
 
     if (this.props.error) mode = "error";
@@ -21,8 +21,9 @@ export class TextInput extends React.Component<
     this.state = {
       isActive: isActive,
       mode: mode,
-      internalValue: this.props.value || ""
+      internalValue: this.props.value || this.props.defaultValue || ""
     };
+    console.log(this.state);
   }
 
   /**
@@ -51,14 +52,21 @@ export class TextInput extends React.Component<
       onLabelRender,
       value,
       className,
-      style
+      style,
+      size,
+      defaultValue,
+      borderRadius
     } = this.props;
 
     const labelStyle = isActive ? "label-text-active" : "label-text-inactive";
     const labelText = onLabelRender ? onLabelRender : labelValue;
 
     return (
-      <div className={`TextInput-root ${className || ""}`} style={style}>
+      <div
+        className={`TextInput-root ${className || ""} TextInput-size-${size ||
+          ""} TextInput-radius-${borderRadius || ""}`}
+        style={style}
+      >
         <label className="label-container">
           <span className={`label-text ${labelStyle}`}>{labelText}</span>
           <input
@@ -68,6 +76,7 @@ export class TextInput extends React.Component<
             className={`input ${mode}-outline`}
             type={type}
             value={value}
+            defaultValue={defaultValue}
           />
         </label>
       </div>

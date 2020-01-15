@@ -1,20 +1,12 @@
 @import "../styles/_variables";
 
+$sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
+
 @mixin variable-styles {
   /**
 	*	Variable styles refer to styles that will be added or removed programmatically
 	*/
   .label-container {
-    .label-text-active {
-      font-weight: lighter;
-      color: rgb(104, 104, 104);
-      transform: translate(12px, -0.5em) scale(0.9);
-    }
-
-    .label-text-inactive {
-      transform: translate(10px, 0.5rem);
-    }
-
     .standard-outline:focus {
       $standard_outline_color: #4682b4; // Steel Blue
       border: solid $standard_outline_color 1px;
@@ -35,6 +27,44 @@
   }
 }
 
+@for $i from 1 to 6 {
+  .TextInput-radius-#{$i} .input {
+    border-radius: $i * 1.25px;
+  }
+}
+
+@for $i from 1 to 6 {
+  .TextInput-size-#{$i} {
+    .label-container {
+      height: 20px + $i * 5.25px;
+      padding: 7px;
+
+      .label-text {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 20px;
+        display: flex;
+        transition: all ease 0.2s;
+        font-size: 0.9rem;
+        align-items: center;
+      }
+
+      .label-text-active {
+        font-weight: lighter;
+        color: rgb(104, 104, 104);
+        bottom: 25px + $i * 5.25px;
+        background: white;
+        padding: 0 5px;
+      }
+    }
+
+    .input {
+      font-size: nth($sizes, $i);
+    }
+  }
+}
+
 .TextInput-root {
   @include variable-styles;
   @include RegularFont;
@@ -44,21 +74,11 @@
     display: flex;
     flex-flow: column;
     position: relative;
-    height: 35px;
-    max-width: 250px;
-    padding: 10px;
-
-    .label-text {
-      box-sizing: border-box;
-      transition: all ease 0.2s;
-      font-size: 0.9rem;
-      background-color: white;
-      padding: 0px 5px;
-      position: absolute;
-      cursor: text;
-    }
 
     .input {
+      @include MediumFont;
+      border: solid 1px rgb(88, 88, 88);
+      font-weight: normal;
       height: 100%;
       width: 100%;
       box-sizing: border-box;
