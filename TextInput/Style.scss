@@ -40,23 +40,33 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
       height: inherit;
 
       .label-text {
+        cursor: text;
+        box-sizing: border-box;
         position: absolute;
         top: 0px;
         bottom: 0px;
-        left: 15px;
+        left: 10px;
+        width: 100%;
         display: flex;
-        transition: all ease 0.2s;
-        font-size: 0.9rem;
+        transition: all ease-out 0.2s;
         align-items: center;
+        font-size: nth($sizes, $i);
+        span {
+          padding: inherit;
+          background: white;
+        }
       }
 
       .label-text-active {
-        padding: 7px 5px;
+        font-size: nth($sizes, $i) - 0.1rem;
+        padding: 7px 5px 7px 3px;
         top: -7px;
-        font-weight: lighter;
         color: rgb(104, 104, 104);
         bottom: 25px + $i * 5.25px;
-        background: white;
+        span {
+          padding: inherit;
+          background: white;
+        }
       }
     }
 
@@ -70,6 +80,7 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
   @include variable-styles;
   @include RegularFont;
   padding: 10px;
+  width: 100%;
 
   .label-container {
     display: flex;

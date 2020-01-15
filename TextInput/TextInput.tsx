@@ -68,7 +68,9 @@ export class TextInput extends React.Component<
         style={style}
       >
         <label className="label-container">
-          <span className={`label-text ${labelStyle}`}>{labelText}</span>
+          <span className={`label-text ${labelStyle}`}>
+            <span>{labelText}</span>
+          </span>
           <input
             onChange={value => this.valueChanged(value)}
             onFocus={() => this.changeActiveState(true)}
