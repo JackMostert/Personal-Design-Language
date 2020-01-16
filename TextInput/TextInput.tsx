@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ITextInputProps, ITextInputState } from "./Interface";
 import "./Style.scss";
+import uuidv4 from "../Healpers/healper";
 
 export class TextInput extends React.Component<
   ITextInputProps,
@@ -21,7 +22,8 @@ export class TextInput extends React.Component<
     this.state = {
       isActive: isActive,
       mode: mode,
-      internalValue: this.props.value || this.props.defaultValue || ""
+      internalValue: this.props.value || this.props.defaultValue || "",
+      id: uuidv4()
     };
     console.log(this.state);
   }
@@ -67,20 +69,21 @@ export class TextInput extends React.Component<
           ""} TextInput-radius-${borderRadius || ""}`}
         style={style}
       >
-        <label className="label-container">
+        <label className="label-container" htmlFor={this.state.id}>
           <span className={`label-text ${labelStyle}`}>
             <span>{labelText}</span>
           </span>
-          <input
-            onChange={value => this.valueChanged(value)}
-            onFocus={() => this.changeActiveState(true)}
-            onBlur={() => this.changeActiveState(false)}
-            className={`input ${mode}-outline`}
-            type={type}
-            value={value}
-            defaultValue={defaultValue}
-          />
         </label>
+        <input
+          id={this.state.id}
+          onChange={value => this.valueChanged(value)}
+          onFocus={() => this.changeActiveState(true)}
+          onBlur={() => this.changeActiveState(false)}
+          className={`input ${mode}-outline`}
+          type={type}
+          value={value}
+          defaultValue={defaultValue}
+        />
       </div>
     );
   }

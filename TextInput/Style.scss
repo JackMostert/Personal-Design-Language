@@ -1,29 +1,27 @@
 @import "../styles/_variables";
 
-$sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
+$sizes: 0.8rem, 0.85rem, 0.9rem, 1rem, 1.05rem;
 
 @mixin variable-styles {
   /**
 	*	Variable styles refer to styles that will be added or removed programmatically
 	*/
-  .label-container {
-    .standard-outline:focus {
-      $standard_outline_color: #4682b4; // Steel Blue
-      border: solid $standard_outline_color 1px;
-      box-shadow: 0px 0px 1px 1px $standard_outline_color;
-    }
+  .standard-outline:focus {
+    $standard_outline_color: #4682b4; // Steel Blue
+    border: solid $standard_outline_color 1px;
+    box-shadow: 0px 0px 1px 1px $standard_outline_color;
+  }
 
-    .error-outline:focus {
-      $error_outline_color: #ca3433; // Persian Red
-      border: solid $error_outline_color 1px;
-      box-shadow: 0px 0px 1px 1px $error_outline_color;
-    }
+  .error-outline:focus {
+    $error_outline_color: #ca3433; // Persian Red
+    border: solid $error_outline_color 1px;
+    box-shadow: 0px 0px 1px 1px $error_outline_color;
+  }
 
-    .warning-outline:focus {
-      $warning_outline_color: #fedc56; // Mustard Yellow
-      border: solid $warning_outline_color 1px;
-      box-shadow: 0px 0px 1px 1px $warning_outline_color;
-    }
+  .warning-outline:focus {
+    $warning_outline_color: #fedc56; // Mustard Yellow
+    border: solid $warning_outline_color 1px;
+    box-shadow: 0px 0px 1px 1px $warning_outline_color;
   }
 }
 
@@ -37,36 +35,19 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
   .TextInput-size-#{$i} {
     height: 20px + $i * 5.25px;
     .label-container {
-      height: inherit;
-
       .label-text {
-        cursor: text;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 10px;
-        width: 100%;
-        display: flex;
-        transition: all ease-out 0.2s;
-        align-items: center;
         font-size: nth($sizes, $i);
-        span {
-          padding: inherit;
-          background: white;
-        }
+        line-height: 1rem;
+        top: 0;
       }
 
       .label-text-active {
-        font-size: nth($sizes, $i) - 0.1rem;
-        padding: 7px 5px 7px 3px;
-        top: -7px;
+        font-size: nth($sizes, $i) - 0.15rem;
         color: rgb(104, 104, 104);
-        bottom: 25px + $i * 5.25px;
-        span {
-          padding: inherit;
-          background: white;
-        }
+        top: -(10px + $i * 2.5px);
+        line-height: 5px;
+        background-color: white;
+        padding: 0px 5px;
       }
     }
 
@@ -79,26 +60,34 @@ $sizes: 0.8rem, 0.9rem, 1rem, 1.1rem, 1.2rem;
 .TextInput-root {
   @include variable-styles;
   @include RegularFont;
-  padding: 10px;
-  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  position: relative;
 
   .label-container {
+    position: absolute;
+    height: inherit;
+    width: 100%;
     display: flex;
-    flex-flow: column;
-    position: relative;
+    align-items: center;
+    padding-left: 10px;
 
-    .input {
-      @include MediumFont;
-      border: solid 1px rgb(88, 88, 88);
-      font-weight: normal;
-      height: 100%;
-      width: 100%;
-      box-sizing: border-box;
-      padding-left: 10px;
+    .label-text {
+      transition: all ease-in-out 0.2s;
+      position: relative;
+    }
+  }
 
-      &:focus {
-        outline: none;
-      }
+  .input {
+    @include MediumFont;
+    border: solid 1px rgb(88, 88, 88);
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
     }
   }
 }

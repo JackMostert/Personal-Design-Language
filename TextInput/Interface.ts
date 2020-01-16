@@ -123,4 +123,6 @@ export interface ITextInputState {
    * <input> value is tracked internally
    */
   internalValue: string;
+
+  id: any;
 }
