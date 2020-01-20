@@ -5,6 +5,7 @@ export interface IGridProps {
   rowGap?: string;
   colGap?: string;
   margin?: string;
+  style?: any;
 }
 
 export interface IGridState {

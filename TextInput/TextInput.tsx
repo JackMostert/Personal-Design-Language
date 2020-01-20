@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ITextInputProps, ITextInputState } from "./Interface";
 import "./Style.scss";
-import uuidv4 from "../Healpers/healper";
+import { uuidv4 } from "../Healpers/healper";
 
 export class TextInput extends React.Component<
   ITextInputProps,
@@ -25,7 +25,6 @@ export class TextInput extends React.Component<
       internalValue: this.props.value || this.props.defaultValue || "",
       id: uuidv4()
     };
-    console.log(this.state);
   }
 
   /**
@@ -67,7 +66,7 @@ export class TextInput extends React.Component<
       <div
         className={`TextInput-root ${className || ""} TextInput-size-${size ||
           ""} TextInput-radius-${borderRadius || ""}`}
-        style={style}
+        style={{ width: "250px", ...style }}
       >
         <label className="label-container" htmlFor={this.state.id}>
           <span className={`label-text ${labelStyle}`}>

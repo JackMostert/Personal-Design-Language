@@ -1,0 +1,36 @@
+@import "../styles/_variables";
+
+.NavigationBar-root {
+  width: 100%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  box-sizing: border-box;
+
+  .left,
+  .right {
+    align-items: center;
+    display: flex;
+
+    .link {
+      font-family: "Raleway-Regular";
+      box-sizing: border-box;
+      margin: 0px 7px;
+      transition: all ease-in-out 0.1s;
+      color: rgb(49, 49, 49);
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: rgb(57, 126, 255);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .left {
+    justify-self: left;
+  }
+  .right {
+    justify-self: right;
+  }
+}

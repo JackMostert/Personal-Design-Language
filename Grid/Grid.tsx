@@ -25,7 +25,8 @@ export class Grid extends React.Component<IGridProps, IGridState> {
           rowGap: rowGap,
           columnGap: colGap,
           gap: gap,
-          margin: this.props.margin
+          margin: this.props.margin,
+          ...this.props.style
         }}
       >
         {this.props.children}

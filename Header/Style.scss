@@ -1,0 +1,10 @@
+@import "../styles/_variables";
+
+@for $i from 1 to 7 {
+  .Header-size-#{$i} {
+    @include MediumFont;
+    font-size: 4rem - ($i * 0.5);
+    margin: 7px 0px 12px 0px;
+    letter-spacing: 1px;
+  }
+}

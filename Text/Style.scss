@@ -1,0 +1,18 @@
+@import "../styles/_variables";
+
+.Text-root {
+  padding: 5px 0px;
+  line-height: 1.6rem;
+}
+
+.Text-thin {
+  @include ThinFont;
+}
+
+.Text-light {
+  @include LightFont;
+}
+
+.Text-regular {
+  @include RegularFont;
+}

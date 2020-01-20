@@ -1,0 +1,9 @@
+.Page-root {
+  display: flex;
+
+  .Page-content {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow-y: auto;
+  }
+}
