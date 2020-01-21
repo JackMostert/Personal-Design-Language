@@ -8,7 +8,7 @@ export interface INavigationBarLink {
 }
 
 export interface INavigationBarProps {
-  items: Array<INavigationBarLink>;
+  items?: Array<INavigationBarLink>;
   farItems?: Array<INavigationBarLink>;
   navigationOptions?: {
     style: "sticky" | "fixed" | "initial";

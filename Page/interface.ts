@@ -7,7 +7,8 @@ export interface IPageProps {
   pageAlignment: "flex-start" | "center" | "flex-end";
   pageColor?: string;
   isRoot: boolean;
-  navigationBarLinks?: Array<INavigationBarLink>;
+  navLinksNear?: Array<INavigationBarLink>;
+  navLinksFar?: Array<INavigationBarLink>;
   navigationOptions?: {
     style: "sticky" | "fixed" | "initial";
     stretch?: boolean;

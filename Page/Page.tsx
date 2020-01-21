@@ -17,7 +17,8 @@ export class Page extends React.Component<IPageProps, IPageState> {
       pageAlignment,
       pageColor,
       isRoot,
-      navigationBarLinks,
+      navLinksNear,
+      navLinksFar,
       navigationOptions,
       internalPadding
     } = this.props;
@@ -40,12 +41,12 @@ export class Page extends React.Component<IPageProps, IPageState> {
             background: pageColor
           }}
         >
-          <div style={navigationBarLinks ? { height: "60px" } : {}}>
-            {navigationBarLinks && (
+          <div style={navLinksNear || navLinksFar ? { height: "60px" } : {}}>
+            {(navLinksNear || navLinksFar) && (
               <NavigationBar
                 navigationOptions={navigationOptions}
-                items={navigationBarLinks}
-                farItems={navigationBarLinks}
+                items={navLinksNear}
+                farItems={navLinksFar}
               />
             )}
           </div>

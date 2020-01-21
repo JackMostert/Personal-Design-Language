@@ -36,7 +36,7 @@ export class NavigationBar extends React.Component<
         className="NavigationBar-root"
         style={{ position: style, ...positioning }}
       >
-        <div className="left">{this.generateLinks(this.props.items)}</div>
+        <div className="left">{this.generateLinks(this.props.items || [])}</div>
         <div className="right">
           {this.generateLinks(this.props.farItems || [])}
         </div>
