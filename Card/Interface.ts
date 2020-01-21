@@ -13,7 +13,9 @@ export interface ICardProps {
   /**
    *	Add your own css inline styles
    */
-  style?: React.CSSProperties;
+  style?: any;
+
+  padding?: string;
 }
 
 export interface ICardState {}
