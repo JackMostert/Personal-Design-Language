@@ -2,6 +2,7 @@
 
 .Card-root {
   @include RegularFont;
+  background: white;
 
   display: flex;
   @for $i from 1 through 5 {
