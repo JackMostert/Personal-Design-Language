@@ -6,19 +6,19 @@ $sizes: 0.8rem, 0.85rem, 0.9rem, 1rem, 1.05rem;
   /**
 	*	Variable styles refer to styles that will be added or removed programmatically
 	*/
-  .standard-outline:focus {
+  .standard-outline {
     $standard_outline_color: #4682b4; // Steel Blue
     border: solid $standard_outline_color 1px;
     box-shadow: 0px 0px 1px 1px $standard_outline_color;
   }
 
-  .error-outline:focus {
+  .error-outline {
     $error_outline_color: #ca3433; // Persian Red
     border: solid $error_outline_color 1px;
     box-shadow: 0px 0px 1px 1px $error_outline_color;
   }
 
-  .warning-outline:focus {
+  .warning-outline {
     $warning_outline_color: #fedc56; // Mustard Yellow
     border: solid $warning_outline_color 1px;
     box-shadow: 0px 0px 1px 1px $warning_outline_color;
@@ -64,6 +64,15 @@ $sizes: 0.8rem, 0.85rem, 0.9rem, 1rem, 1.05rem;
   box-sizing: border-box;
   margin-top: 10px;
   position: relative;
+
+  .TextInput-message-error {
+    $error_outline_color: #ca3433; // Persian Red
+    color: $error_outline_color;
+  }
+  .TextInput-message-warning {
+    $warning_outline_color: #fedc56; // Mustard Yellow
+    color: $warning_outline_color;
+  }
 
   .label-container {
     position: absolute;

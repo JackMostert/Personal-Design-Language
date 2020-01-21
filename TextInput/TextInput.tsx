@@ -62,11 +62,18 @@ export class TextInput extends React.Component<
     const labelStyle = isActive ? "label-text-active" : "label-text-inactive";
     const labelText = onLabelRender ? onLabelRender : labelValue;
 
+    const showColor = mode !== "standard" || isActive ? `${mode}-outline` : ``;
+    // const showColor = isActive ? `${mode}-outline` : ``;
+
     return (
       <div
         className={`TextInput-root ${className || ""} TextInput-size-${size ||
           ""} TextInput-radius-${borderRadius || ""}`}
-        style={{ width: "250px", ...style }}
+        style={{
+          width: "250px",
+          ...style,
+          marginBottom: mode !== "standard" ? "20px" : ""
+        }}
       >
         <label className="label-container" htmlFor={this.state.id}>
           <span className={`label-text ${labelStyle}`}>
@@ -78,11 +85,14 @@ export class TextInput extends React.Component<
           onChange={value => this.valueChanged(value)}
           onFocus={() => this.changeActiveState(true)}
           onBlur={() => this.changeActiveState(false)}
-          className={`input ${mode}-outline`}
+          className={`input ${showColor}`}
           type={type}
           value={value}
           defaultValue={defaultValue}
         />
+        <span className={`TextInput-message-${mode}`}>
+          {this.props.error || this.props.warning}
+        </span>
       </div>
     );
   }
