@@ -4,6 +4,8 @@ export interface INavigationBarLink {
   id?: string | number;
   iconName?: string;
 
+  isHeader?: boolean;
+
   onClick?: () => void;
 }
 
