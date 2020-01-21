@@ -14,4 +14,6 @@ export interface ICallToActionProps {
    * Note: You can ignore this if your passing the value though Children
    */
   text?: string;
+
+  size: 1 | 2 | 3 | 4 | 5;
 }
