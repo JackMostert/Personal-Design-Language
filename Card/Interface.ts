@@ -15,7 +15,11 @@ export interface ICardProps {
    */
   style?: any;
 
-  padding?: string;
+  /**
+   *	Determins the width of the card
+   *	Note: values are any or fill
+   */
+  size: "fill" | "small" | "medium" | "large" | "xlarge";
 }
 
 export interface ICardState {}

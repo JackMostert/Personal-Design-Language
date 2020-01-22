@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ICardImageProps, ICardImageState } from "./Interface";
-import './Style.scss';
+import "./Style.scss";
 
 export class CardImage extends React.Component<
   ICardImageProps,
@@ -16,11 +16,7 @@ export class CardImage extends React.Component<
     return (
       <div className="CardImage-root">
         <div className="overlay">{this.props.children}</div>
-        <img
-          alt={this.props.alt}
-          className={this.props.size}
-          src={this.props.src}
-        />
+        <img alt={this.props.alt} src={this.props.src} />
       </div>
     );
   }

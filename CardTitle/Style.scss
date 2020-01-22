@@ -1,0 +1,16 @@
+@import "../styles/_variables";
+
+.CardTitle-root {
+  grid-area: CardTitle-root;
+  box-sizing: border-box;
+  padding: 10px 0px 12px 10px;
+  letter-spacing: 1px;
+  width: 100%;
+  font-family: "Raleway-Medium", sans-serif;
+}
+
+@for $i from 1 to 7 {
+  .CardTitle-size-#{$i} {
+    font-size: 4rem - ($i * 0.5);
+  }
+}

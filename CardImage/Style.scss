@@ -2,6 +2,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  grid-area: CardImage-root;
 
   .overlay {
     position: absolute;
@@ -23,31 +24,7 @@
     }
   }
 
-  .small {
-    width: 250px;
-    height: 150px;
-  }
-
-  .normal {
-    width: 350px;
-    height: 250px;
-  }
-
-  .large {
-    width: 450px;
-    height: 350px;
-  }
-
-  .xlarge {
-    width: 550px;
-    height: 450px;
-  }
-
-  .fill {
+  img {
     width: 100%;
-  }
-
-  .auto {
-    width: auto;
   }
 }
