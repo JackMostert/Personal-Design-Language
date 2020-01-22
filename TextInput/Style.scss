@@ -82,7 +82,7 @@ $sizes: 0.8rem, 0.85rem, 0.9rem, 1rem, 1.05rem;
     align-items: center;
 
     .label-text {
-      transition: all ease 0.2s;
+      transition: all ease-in-out 0.1s;
       position: relative;
       margin-left: 13px;
     }
