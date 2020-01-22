@@ -56,7 +56,8 @@ export class TextInput extends React.Component<
       style,
       size,
       defaultValue,
-      borderRadius
+      borderRadius,
+      autoFocus
     } = this.props;
 
     const labelStyle = isActive ? "label-text-active" : "label-text-inactive";
@@ -81,6 +82,7 @@ export class TextInput extends React.Component<
           </span>
         </label>
         <input
+          autoFocus={autoFocus}
           id={this.state.id}
           onChange={value => this.valueChanged(value)}
           onFocus={() => this.changeActiveState(true)}
