@@ -26,7 +26,7 @@ export class NavigationBar extends React.Component<
           className="link"
           onClick={() => this.props.onClick && this.props.onClick(item.url)}
         >
-          <Icon width={31} height={31} icon="" />
+          <Icon icon="" />
           <span className="link-text">{item.displayName}</span>
         </a>
       ) : (

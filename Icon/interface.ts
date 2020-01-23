@@ -1,7 +1,5 @@
 export interface IIconProps {
-  width: number;
-  height: number;
+  fontSize?: string;
   icon?: string;
-  onIconRender?: JSX.Element;
-  defaultIcon?: string;
+  style?: any;
 }

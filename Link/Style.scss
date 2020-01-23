@@ -1,6 +1,20 @@
 .Link-root {
   text-decoration: none;
-  color: #397eff;
+  font-family: "Raleway-Regular";
+  box-sizing: border-box;
+  transition: all ease-in-out 0.1s;
   padding: 7px 0px;
+}
+
+.Link-root-default {
+  color: rgb(49, 49, 49);
+  &:hover {
+    color: rgb(57, 126, 255);
+    cursor: pointer;
+  }
+}
+
+.Link-root-inline {
   cursor: pointer;
+  color: #397eff;
 }
