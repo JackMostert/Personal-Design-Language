@@ -14,6 +14,7 @@ export interface IPageProps {
     stretch?: boolean;
   };
   internalPadding?: string;
+  onNavLinkClick?: (url?: string) => void;
 }
 
 export interface IPageState {}

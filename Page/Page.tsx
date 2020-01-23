@@ -47,6 +47,7 @@ export class Page extends React.Component<IPageProps, IPageState> {
                 navigationOptions={navigationOptions}
                 items={navLinksNear}
                 farItems={navLinksFar}
+                onClick={this.props.onNavLinkClick}
               />
             )}
           </div>
