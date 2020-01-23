@@ -22,7 +22,7 @@ export class NavigationBar extends React.Component<
     let items = linkArray.map((item: INavigationBarLink) =>
       !item.isHeader ? (
         <a
-          href={item.url}
+          href={!this.props.onClick ? item.url : undefined}
           className="link"
           onClick={() => this.props.onClick && this.props.onClick(item.url)}
         >
