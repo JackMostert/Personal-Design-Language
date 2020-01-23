@@ -3,10 +3,7 @@ export interface INavigationBarLink {
   displayName: string;
   id?: string | number;
   iconName?: string;
-
   isHeader?: boolean;
-
-  onClick?: () => void;
 }
 
 export interface INavigationBarProps {
@@ -16,6 +13,7 @@ export interface INavigationBarProps {
     style: "sticky" | "fixed" | "initial";
     stretch?: boolean;
   };
+  onClick?: (url?: string) => void;
 }
 
 export interface INavigationBarState {}

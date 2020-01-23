@@ -21,7 +21,11 @@ export class NavigationBar extends React.Component<
     let headers: any[] = [];
     let items = linkArray.map((item: INavigationBarLink) =>
       !item.isHeader ? (
-        <a href={item.url} className="link">
+        <a
+          href={item.url}
+          className="link"
+          onClick={() => this.props.onClick && this.props.onClick(item.url)}
+        >
           <Icon width={31} height={31} icon="" />
           <span className="link-text">{item.displayName}</span>
         </a>
