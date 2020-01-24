@@ -7,6 +7,7 @@ import {
 import "./Style.scss";
 import Icon from "../Icon";
 import Header from "../Header/Index";
+import Link from "../Link/Index";
 
 export class NavigationBar extends React.Component<
   INavigationBarProps,
@@ -21,14 +22,12 @@ export class NavigationBar extends React.Component<
     let headers: any[] = [];
     let items = linkArray.map((item: INavigationBarLink) =>
       !item.isHeader ? (
-        <a
+        <Link
           href={!this.props.onClick ? item.url : undefined}
-          className="link"
+          text={item.displayName}
+          iconProps={{ fontSize: "1.3rem", icon: item.iconName }}
           onClick={() => this.props.onClick && this.props.onClick(item.url)}
-        >
-          <Icon icon={item.iconName} fontSize="1.7rem" />
-          <span className="link-text">{item.displayName}</span>
-        </a>
+        />
       ) : (
         <Header hNumber={6}>
           {item.iconName && <Icon icon={item.iconName} fontSize="1.7rem" />}
