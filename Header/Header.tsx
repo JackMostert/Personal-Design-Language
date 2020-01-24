@@ -8,7 +8,7 @@ export class Header extends React.Component<IHeaderProps> {
       `h${this.props.hNumber}`,
       {
         className: `Header-root Header-size-${this.props.hNumber}`,
-        style: { textAlign: this.props.alignment }
+        style: { justifyContent: this.props.alignment }
       },
       this.props.children
     );

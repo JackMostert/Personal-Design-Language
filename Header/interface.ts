@@ -1,4 +1,4 @@
 export interface IHeaderProps {
   hNumber: 1 | 2 | 3 | 4 | 5 | 6;
-  alignment?: "left" | "center" | "right";
+  alignment?: "start" | "center" | "flex-end";
 }
