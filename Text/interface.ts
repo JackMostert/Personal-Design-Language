@@ -1,4 +1,4 @@
 export interface ITextProps {
-  weight: "light" | "thin" | "regular";
+  weight: "light" | "thin" | "regular" | "bold";
   fontSize?: string;
 }

@@ -3,6 +3,7 @@
 .Text-root {
   padding: 5px 0px;
   line-height: 1.6rem;
+  font-feature-settings: "lnum";
 }
 
 .Text-thin {
@@ -15,4 +16,8 @@
 
 .Text-regular {
   @include RegularFont;
+}
+
+.Text-bold {
+  @include BoldFont;
 }

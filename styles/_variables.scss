@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Raleway-Light";
   src: url("./fonts/Raleway-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin LightFont {
@@ -11,6 +12,7 @@
 @font-face {
   font-family: "Raleway-Thin";
   src: url("./fonts/Raleway-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin ThinFont {
@@ -21,6 +23,7 @@
 @font-face {
   font-family: "Raleway-Regular";
   src: url("./fonts/Raleway-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin RegularFont {
@@ -31,6 +34,7 @@
 @font-face {
   font-family: "Raleway-Medium";
   src: url("./fonts/Raleway-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin MediumFont {
@@ -40,6 +44,7 @@
 @font-face {
   font-family: "Raleway-Bold";
   src: url("./fonts/Raleway-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @mixin BoldFont {

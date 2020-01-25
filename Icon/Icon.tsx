@@ -14,7 +14,7 @@ export class Icon extends React.Component<IIconProps> {
             className={`${icon} Icon-root`}
             style={{ ...style, fontSize: fontSize }}
           ></i>
-          <Text weight="light">{text}</Text>
+          <Text weight="regular">{text}</Text>
         </div>
       );
 
