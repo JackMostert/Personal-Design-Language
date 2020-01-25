@@ -15,7 +15,9 @@ export class CardImage extends React.Component<
   public render() {
     return (
       <div className="CardImage-root">
-        <div className="overlay">{this.props.children}</div>
+        {this.props.children && (
+          <div className="overlay">{this.props.children}</div>
+        )}
         <img alt={this.props.alt} src={this.props.src} />
       </div>
     );
