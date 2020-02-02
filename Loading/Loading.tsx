@@ -17,8 +17,8 @@ export function Loading(props: ILoadingProps) {
       <div
         className={spinner && "spinner"}
         style={{
-          width: spinner.size,
-          height: spinner.size,
+          width: spinner.size || 50,
+          height: spinner.size || 50,
           border: `2px solid ${spinner.baseColor || "#b9b9b9"}`,
           borderTop: `4px solid ${spinner.accentColor || "#4c8bff"}`
         }}
