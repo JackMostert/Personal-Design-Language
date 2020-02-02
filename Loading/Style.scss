@@ -15,7 +15,7 @@
 
     /*Default animation code*/
     transition-property: transform;
-    transition-duration: 1s;
+    transition-duration: 1.2s;
     animation-name: rotate; /*Call to @keyframe rule*/
     animation-iteration-count: infinite; /*Make the animation go forever*/
     animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
