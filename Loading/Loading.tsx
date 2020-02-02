@@ -15,18 +15,16 @@ export function Loading(props: ILoadingProps) {
       }}
     >
       {spinner && (
-        <div>
-          <div
-            className={spinner && "spinner"}
-            style={{
-              animationDuration: `${animationLength}s`,
-              width: spinner.size,
-              height: spinner.size,
-              border: `2px solid ${spinner.baseColor || "#b9b9b9"}`,
-              borderTop: `4px solid ${spinner.accentColor || "#4c8bff"}`
-            }}
-          ></div>
-        </div>
+        <div
+          className={spinner && "spinner"}
+          style={{
+            animationDuration: `${animationLength}s`,
+            width: spinner.size,
+            height: spinner.size,
+            border: `2px solid ${spinner.baseColor || "#b9b9b9"}`,
+            borderTop: `4px solid ${spinner.accentColor || "#4c8bff"}`
+          }}
+        ></div>
       )}
     </div>
   );
