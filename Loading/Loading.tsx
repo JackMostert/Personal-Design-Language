@@ -10,7 +10,7 @@ export function Loading(props: ILoadingProps) {
     <div
       className={`Loader-root ${props.fadout && "spinner-fadout"}`}
       style={{
-        transition: `all ease-in-out ${animationLength}s`,
+        transition: `all ease-in-out 1s`,
         transitionDelay: `${delay}s`
       }}
     >
@@ -19,6 +19,7 @@ export function Loading(props: ILoadingProps) {
           <div
             className={spinner && "spinner"}
             style={{
+              animationDuration: `${animationLength}s`,
               width: spinner.size,
               height: spinner.size,
               border: `2px solid ${spinner.baseColor || "#b9b9b9"}`,
