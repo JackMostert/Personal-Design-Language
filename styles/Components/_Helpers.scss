@@ -34,3 +34,9 @@
     text-overflow: ellipsis;
   }
 }
+
+@mixin scrollable {
+  &--scrollable {
+    overflow-y: auto;
+  }
+}

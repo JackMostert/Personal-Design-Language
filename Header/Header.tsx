@@ -5,7 +5,7 @@ import "./Header.scss";
 export function Header(props: IHeaderProps) {
   // Set css style class
   const headerStyle =
-    "Header-Root--style-" + (props.headerStyle || props.headerSize);
+    "header-Root--style-" + (props.headerStyle || props.headerSize);
 
   // Create header component
   return React.createElement(

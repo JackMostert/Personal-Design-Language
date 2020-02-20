@@ -39,3 +39,14 @@ $body-type-size-large: 1.3rem;
 
 // Typography
 @import "./Components/_Typography";
+
+// Components
+.page-root {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  &__content {
+    @include scrollable;
+  }
+}

@@ -5,13 +5,13 @@ import "./Text.scss";
 export class Text extends React.Component<ITextProps> {
   public render() {
     const { weight, size, truncate, className } = this.props;
-    const weightStyle = weight ? `Body-text--weight-${weight}` : "";
-    const sizeStyle = size ? `Body-text--size-${size}` : "";
-    const truncateStyle = truncate ? `Body-text--truncate` : "";
+    const weightStyle = weight ? `body-text--weight-${weight}` : "";
+    const sizeStyle = size ? `body-text--size-${size}` : "";
+    const truncateStyle = truncate ? `body-text--truncate` : "";
     const classNameStyle = className ? className : "";
     return (
       <p
-        className={`Body-text ${weightStyle} ${sizeStyle} ${truncateStyle} ${classNameStyle}`}
+        className={`body-text ${weightStyle} ${sizeStyle} ${truncateStyle} ${classNameStyle}`}
       >
         {this.props.children}
       </p>

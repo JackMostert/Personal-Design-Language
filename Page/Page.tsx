@@ -1,62 +1,39 @@
 import * as React from "react";
-import { IPageProps, IPageState } from "./interface";
-import "./Style.scss";
-import NavigationBar from "../NavigationBar/Index";
+import { IPageProps, IPageState } from "./PageTypes";
+
+const render = (propElement: JSX.Element | string, type: string) => {
+  if (propElement && typeof propElement === "string")
+    return React.createElement(
+      type.toLowerCase(),
+      { className: `page-root__${type}` },
+      propElement
+    );
+
+  return propElement;
+};
 
 export class Page extends React.Component<IPageProps, IPageState> {
-  constructor(props: IPageProps) {
-    super(props);
-    this.state = {};
-  }
-
   public render() {
     const {
-      backgroundColor,
-      backgroundImage,
-      width,
-      pageAlignment,
-      pageColor,
-      isRoot,
-      navLinksNear,
-      navLinksFar,
-      navigationOptions,
-      internalPadding
+      children,
+      header,
+      footer,
+      style,
+      className,
+      scrollable
     } = this.props;
-    const WHstyle = isRoot
-      ? { width: "100vw", height: "100vh" }
-      : { width: "100%", height: "100%" };
     return (
-      <div
-        className="Page-root"
-        style={{
-          background: backgroundColor,
-          justifyContent: pageAlignment,
-          ...WHstyle
-        }}
-      >
+      <section className={`page-root ${className || ""}`} style={style}>
+        {header && render(header, "Header")}
         <div
-          className="Page-content"
-          style={{
-            width: width,
-            background: pageColor
-          }}
+          className={`page-root__content ${
+            scrollable ? "page-root__content--scrollable" : ""
+          }`}
         >
-          <div style={navLinksNear || navLinksFar ? { height: "60px" } : {}}>
-            {(navLinksNear || navLinksFar) && (
-              <NavigationBar
-                navigationOptions={navigationOptions}
-                items={navLinksNear}
-                farItems={navLinksFar}
-                onClick={this.props.onNavLinkClick}
-              />
-            )}
-          </div>
-          <div style={{ padding: internalPadding, boxSizing: "border-box" }}>
-            {this.props.children}
-          </div>
-          <div></div>
+          {children}
         </div>
-      </div>
+        {footer && render(footer, "Footer")}
+      </section>
     );
   }
 }
