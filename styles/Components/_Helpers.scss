@@ -1,0 +1,36 @@
+@mixin body-type-sizes {
+  &--size-small {
+    font-size: $body-type-size-small;
+  }
+  &--size-normal {
+    font-size: $body-type-size-normal;
+  }
+  &--size-large {
+    font-size: $body-type-size-large;
+  }
+}
+
+@mixin body-type-weights {
+  &--weight-thin {
+    font-family: "Raleway-Thin";
+  }
+  &--weight-light {
+    font-family: "Raleway-Light";
+  }
+  &--weight-regular {
+    font-family: "Raleway-Regular";
+  }
+  &--weight-bold {
+    font-family: "Raleway-Bold";
+  }
+}
+
+@mixin effects {
+  &--truncate {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

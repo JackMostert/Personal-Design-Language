@@ -1,16 +1,19 @@
 import * as React from "react";
-import { IHeaderProps } from "./interface";
-import "./Style.scss";
+import { IHeaderProps } from "./HeaderTypes";
+import "./Header.scss";
 
-export class Header extends React.Component<IHeaderProps> {
-  public render() {
-    return React.createElement(
-      `h${this.props.hNumber}`,
-      {
-        className: `Header-root Header-size-${this.props.hNumber}`,
-        style: { justifyContent: this.props.alignment }
-      },
-      this.props.children
-    );
-  }
+export function Header(props: IHeaderProps) {
+  // Set css style class
+  const headerStyle =
+    "Header-Root--style-" + (props.headerStyle || props.headerSize);
+
+  // Create header component
+  return React.createElement(
+    props.headerSize,
+    {
+      className: headerStyle + " " + (props.className || ""),
+      style: props.style
+    },
+    props.value || props.children
+  );
 }
