@@ -1,0 +1,16 @@
+.commandbar-root {
+  width: 100%;
+  border-bottom: thin #c5c5c5 solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__near,
+  &__far {
+    display: flex;
+    & > * {
+      padding: 5px;
+      margin: 0px 5px;
+    }
+  }
+}

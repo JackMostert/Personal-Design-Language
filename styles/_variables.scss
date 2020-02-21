@@ -48,5 +48,6 @@ $body-type-size-large: 1.3rem;
   grid-template-rows: auto 1fr auto;
   &__content {
     @include scrollable;
+    padding: 3%;
   }
 }
