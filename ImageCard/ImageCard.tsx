@@ -14,7 +14,9 @@ export class ImageCard extends React.Component<
           <img className="ImageCard-root__image" src={this.props.src} />
           <span className="ImageCard-root__title">{this.props.title}</span>
         </div>
-        <div className="ImageCard-root__content body-text">{this.props.content}</div>
+        <div className="ImageCard-root__content">
+          {this.props.content}
+        </div>
       </div>
     );
   }

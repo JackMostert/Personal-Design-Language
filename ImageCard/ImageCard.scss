@@ -1,5 +1,9 @@
 .ImageCard-root__content {
-  padding: 5px;
+  padding: 5px 10px;
+  line-height: 1.6rem;
+  font-feature-settings: "lnum";
+  font-family: "Raleway-Regular";
+  box-sizing: border-box;
 }
 
 .ImageCard-root__container {

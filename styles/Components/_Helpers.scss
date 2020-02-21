@@ -8,6 +8,9 @@
   &--size-large {
     font-size: $body-type-size-large;
   }
+  &--size-xlarge {
+    font-size: 1.8rem;
+  }
 }
 
 @mixin body-type-weights {
@@ -50,4 +53,39 @@
     box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.2),
       0px -3px 2px 0px rgb(240, 240, 240);
   }
+}
+
+%position-base {
+  display: flex;
+}
+
+.helper--spacing-left {
+  @extend %position-base;
+  justify-content: flex-start;
+}
+
+.helper--spacing-right {
+  @extend %position-base;
+  justify-content: flex-end;
+}
+
+.helper--spacing-evenly {
+  @extend %position-base;
+  justify-content: space-evenly;
+}
+
+.helper--spacing-between {
+  @extend %position-base;
+  justify-content: space-between;
+}
+
+.helper--spacing-around {
+  @extend %position-base;
+  justify-content: space-around;
+}
+
+.helper--spacing-center {
+  @extend %position-base;
+  justify-content: center;
+  align-items: center;
 }
