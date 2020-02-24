@@ -8,7 +8,7 @@ import { Spacing } from "../Helpers/Spacing";
 export class Navigation extends React.Component<INavigationProps> {
   public render() {
     return (
-      <nav className="Navigation-root">
+      <nav className="Navigation-root" style={{ ...this.props.style }}>
         <Spacing spacing="between">
           <div>
             <div className="Navigation-root__logo">{this.props.logo}</div>
@@ -16,10 +16,11 @@ export class Navigation extends React.Component<INavigationProps> {
           </div>
           <div className="Navigation-root__far">
             {this.props.farLinks?.map((el: ILinkProps) => (
-              <Link {...el} />
+              <Link {...el} onClick={this.props.onClick} />
             ))}
           </div>
         </Spacing>
+        {this.props.children}
       </nav>
     );
   }

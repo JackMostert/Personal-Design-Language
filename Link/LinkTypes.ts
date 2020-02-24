@@ -1,6 +1,5 @@
 export interface ILinkProps {
   url?: string;
-  onClick?: (name: string) => void;
+  onClick?: (url: string) => void;
   text: string;
-  name?: string;
 }
