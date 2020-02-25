@@ -141,8 +141,16 @@
 // Overline
 
 .overline {
+  text-transform: uppercase;
+  padding: 3px;
+  margin: 2px 0px;
+  color: grey;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   &--serif {
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
   &--sans-serif {
+    font-family: "Raleway-Regular";
   }
 }
