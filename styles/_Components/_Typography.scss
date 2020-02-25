@@ -88,6 +88,7 @@
 // Link
 
 .link {
+  font-family: "Raleway-Regular";
   font-size: 1rem;
   padding: 10px;
   color: rgb(0, 153, 255);
@@ -110,9 +111,30 @@
 // Caption
 
 .caption {
+  display: block;
+  padding: 3px;
+  margin: 2px 0px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background-color: grey;
+  }
+  position: relative;
+  color: grey;
+  padding-left: 10px;
+  background-color: rgb(245, 245, 245);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-style: italic;
   &--serif {
+    font-family: Georgia, Times, "Times New Roman", serif;
   }
   &--sans-serif {
+    font-family: "Raleway-Regular";
   }
 }
 
