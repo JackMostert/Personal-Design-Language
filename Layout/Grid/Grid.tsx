@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SizeMe } from "react-sizeme";
 import { IGridProps, IGridState } from "./GridTypes";
-import CalculateGrid from "../Logic/CalculateGrid";
+import CalculateGrid from "../../Logic/CalculateGrid";
 import "./Grid.scss";
 
 export class Grid extends React.Component<IGridProps, IGridState> {
@@ -15,9 +15,9 @@ export class Grid extends React.Component<IGridProps, IGridState> {
   };
 
   public render() {
-    const { items, columnGap, rowGap } = this.props;
+    const { items, columnGap, rowGap, style } = this.props;
     return (
-      <div className="GalleryGrid-root">
+      <div className="GalleryGrid-root" style={style}>
         <SizeMe monitorHeight>
           {({ size }: any) => {
             if (!size.width) return <div></div>;

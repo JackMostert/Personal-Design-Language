@@ -3,6 +3,7 @@ export interface IGridProps {
   items: Array<JSX.Element>;
   columnGap?: string | number;
   rowGap?: string | number;
+  style?: React.CSSProperties;
 }
 
 export interface IMediaSize {
