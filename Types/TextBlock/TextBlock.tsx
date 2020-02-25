@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ITextProps } from "./TextTypes";
+import { ITextBlockProps } from "./TextBlockTypes";
 
-export class Text extends React.Component<ITextProps> {
+export class TextBlock extends React.Component<ITextBlockProps> {
   public render() {
     const { className, style, fontStyle, modifySize } = this.props;
 
