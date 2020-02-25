@@ -1,19 +1,27 @@
 import * as React from "react";
 import { IHeaderProps } from "./HeaderTypes";
-import "./Header.scss";
 
 export function Header(props: IHeaderProps) {
-  // Set css style class
-  const headerStyle =
-    "header-Root--style-" + (props.headerStyle || props.headerSize);
+  const {
+    type,
+    overrideStyle,
+    value,
+    children,
+    className,
+    style,
+    modifySize
+  } = props;
 
-  // Create header component
-  return React.createElement(
-    props.headerSize,
-    {
-      className: headerStyle + " " + (props.className || ""),
-      style: props.style
-    },
-    props.value || props.children
-  );
+  let baseClass = `header ${className || ""}`;
+
+  if (overrideStyle) baseClass += ` header--${overrideStyle}`;
+  else baseClass += ` header--${type}`;
+
+  let attributes = {
+    className: baseClass,
+    style: style,
+    fontSize: modifySize || ""
+  };
+
+  return React.createElement(type, attributes, value || children);
 }

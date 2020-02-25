@@ -1,7 +1,6 @@
 export interface ITextProps {
-  weight?: string;
-  size?: "small" | "normal" | "large" | "xlarge";
-  truncate?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  fontStyle?: "sans-serif" | "serif";
+  modifySize?: "smaller" | "larger";
 }

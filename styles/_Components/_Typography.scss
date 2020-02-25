@@ -1,0 +1,126 @@
+@import "./Helper";
+
+// Headers
+
+.header {
+  margin: 0;
+  font-family: "Raleway-Medium";
+
+  &--h1 {
+    font-family: "Raleway-Light";
+    font-size: 6rem;
+    letter-spacing: -0.09375rem;
+    @include generate-larger-and-smaller-fonts(6rem);
+  }
+  &--h2 {
+    font-family: "Raleway-Light";
+    font-size: 3.75rem;
+    letter-spacing: -0.03125rem;
+    @include generate-larger-and-smaller-fonts(3.75rem);
+  }
+  &--h3 {
+    font-family: "Raleway-Regular";
+    font-size: 3rem;
+    letter-spacing: 0;
+    @include generate-larger-and-smaller-fonts(3rem);
+  }
+  &--h4 {
+    font-family: "Raleway-Regular";
+    font-size: 2.125rem;
+    letter-spacing: 0.015625rem;
+    @include generate-larger-and-smaller-fonts(2.125rem);
+  }
+  &--h5 {
+    font-family: "Raleway-Regular";
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    @include generate-larger-and-smaller-fonts(1.5rem);
+  }
+  &--h6 {
+    font-family: "Raleway-Medium";
+    font-weight: lighter;
+    font-size: 1.25rem;
+    letter-spacing: 0.009375rem;
+    @include generate-larger-and-smaller-fonts(1.25rem);
+  }
+}
+
+// Subtitles
+
+.subtitle {
+  &--normal {
+  }
+  &--small {
+  }
+}
+
+// Bodys
+
+.text-block {
+  padding: 5px 0px;
+  font-family: "Raleway-Regular";
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  font-feature-settings: "lnum";
+  @include generate-larger-and-smaller-fonts(1rem, 0.1rem);
+  &--serif {
+    font-family: Georgia, Times, "Times New Roman", serif;
+  }
+  &--sans-serif {
+    font-family: "Raleway-Regular";
+  }
+}
+
+// Button
+
+.button {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  @include generate-larger-and-smaller-fonts(1rem, 0.1rem);
+
+  &--call-to-action {
+  }
+  &--normal {
+  }
+}
+
+// Link
+
+.link {
+  font-size: 1rem;
+  padding: 10px;
+  color: rgb(0, 153, 255);
+  &:hover {
+    cursor: pointer;
+  }
+  &--inline {
+    padding: 0 5px;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+  }
+  &--invert {
+    color: black;
+    &:hover {
+      color: rgb(0, 153, 255);
+    }
+  }
+}
+
+// Caption
+
+.caption {
+  &--serif {
+  }
+  &--sans-serif {
+  }
+}
+
+// Overline
+
+.overline {
+  &--serif {
+  }
+  &--sans-serif {
+  }
+}
