@@ -5,9 +5,9 @@ import Header from "../Header";
 export class SectionHeader extends React.Component<IHeaderProps> {
   public render() {
     return (
-      <div className="section-header">
+      <header className="section-header">
         <Header {...this.props} />
-      </div>
+      </header>
     );
   }
 }
